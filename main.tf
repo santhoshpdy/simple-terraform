@@ -3,7 +3,7 @@ data "ibm_resource_group" "group" {
 }
 
 resource "ibm_is_vpc" "vpc" {
-  name = "${var.vpc_name}"
+  name           = "${var.vpc_name}"
   resource_group = "${data.ibm_resource_group.group.id}"
   tags = ["tag1","tag2"]
 }
